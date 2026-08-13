@@ -9,8 +9,11 @@ app.get("/", (_req, res) => {
 
 // app.use("/api/v1", routes);
 
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
-});
+// On Vercel the app is invoked per request, so it must not open a port itself.
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`);
+  });
+}
 
 export default app;
