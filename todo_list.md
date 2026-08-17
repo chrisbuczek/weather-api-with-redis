@@ -65,9 +65,9 @@ Goal: an API endpoint `GET /api/weather/:city` that returns weather from a 3rd-p
 
 ### 1. Initialize the project
 
-- [ ] `npm init -y`
-- [ ] Set `"type": "module"` in `package.json` (use ES modules) — or keep CommonJS, just be consistent
-- [ ] Create folder structure:
+- [x] `npm init -y`
+- [x] Set `"type": "module"` in `package.json` (use ES modules) — or keep CommonJS, just be consistent
+- [x] Create folder structure:
   ```
   src/
     app.js           # express app
@@ -80,16 +80,16 @@ Goal: an API endpoint `GET /api/weather/:city` that returns weather from a 3rd-p
   .env.example
   .gitignore
   ```
-- [ ] `.gitignore` must include `node_modules`, `.env`
+- [x] `.gitignore` must include `node_modules`, `.env`
 
 **Libraries:** none (npm only)
 
 ### 2. Add the base server
 
-- [ ] Create an Express app, add `express.json()`
-- [ ] `GET /health` returning `{ status: "ok" }`
-- [ ] Start server on `PORT` (default 3000)
-- [ ] Add `"dev": "nodemon src/server.js"` and `"start": "node src/server.js"` scripts
+- [x] Create an Express app, add `express.json()`
+- [x] `GET /health` returning `{ status: "ok" }`
+- [x] Start server on `PORT` (default 3000)
+- [x] Add `"dev": "nodemon src/server.js"` and `"start": "node src/server.js"` scripts
 
 **Libraries:**
 
@@ -98,10 +98,10 @@ Goal: an API endpoint `GET /api/weather/:city` that returns weather from a 3rd-p
 
 ### 3. Environment variables
 
-- [ ] Load env vars at the very top of the entry point
-- [ ] Define: `PORT`, `WEATHER_API_KEY`, `WEATHER_API_BASE_URL`, `REDIS_URL`, `CACHE_TTL_SECONDS`
-- [ ] Create `src/config/env.js` that reads + validates them and exports a single config object (fail fast on startup if a required one is missing)
-- [ ] Commit `.env.example` with empty values, never `.env`
+- [x] Load env vars at the very top of the entry point
+- [x] Define: `PORT`, `WEATHER_API_KEY`, `WEATHER_API_BASE_URL`, `REDIS_URL`, `CACHE_TTL_SECONDS`
+- [x] Create `src/config/env.js` that reads + validates them and exports a single config object (fail fast on startup if a required one is missing)
+- [x] Commit `.env.example` with empty values, never `.env`
 
 **Libraries:**
 
@@ -114,9 +114,9 @@ Goal: an API endpoint `GET /api/weather/:city` that returns weather from a 3rd-p
 
 ### 4. Hardcoded weather endpoint
 
-- [ ] `GET /api/weather/:city` returns a hardcoded JSON object (city, temperature, conditions, humidity, wind)
-- [ ] Wire it up: `routes/weather.routes.js` → `controllers/weather.controller.js`
-- [ ] Test with your HTTP client — this locks in the response shape before any real data flows through
+- [x] `GET /api/weather/:city` returns a hardcoded JSON object (city, temperature, conditions, humidity, wind)
+- [x] Wire it up: `routes/weather.routes.js` → `controllers/weather.controller.js`
+- [x] Test with your HTTP client — this locks in the response shape before any real data flows through
 
 **Libraries:**
 

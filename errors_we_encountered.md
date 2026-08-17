@@ -122,3 +122,15 @@ TypeScript compiled weather.ts into weather.js, but it left your import string u
 This is a deliberate, long-standing design decision, and it surprises everyone. The TypeScript team's position is that they emit JavaScript, they don't rewrite module specifiers — your import string is data they pass through. Rewriting paths would mean TypeScript has to model every possible output layout and bundler, which is a job it explicitly declines.
 
 # 4. tsconfig.json had "module": "commonjs" instead of "nodenext"
+
+# 5. How to pass logic to controllers
+
+Instead of this:
+
+````router.get("/:city", (req: Request, res: Response) => {
+  getWeatherCity(req, res);
+}); ```
+Do this:
+``` router.get("/:city", getWeatherCity); ```
+
+````

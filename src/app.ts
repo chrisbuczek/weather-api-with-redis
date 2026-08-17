@@ -1,11 +1,15 @@
-import express from "express";
-import routes from "./routes";
+import express, { type Express, type Request, type Response } from "express";
+import routes from "./routes/index.js";
+import { config } from "./config/env.js";
 
-const app = express();
+const app: Express = express();
 const PORT = 3000;
 
-app.get("/", (_req, res) => {
+app.use(express.json());
+
+app.get("/", (req: Request, res: Response) => {
   res.send("Weather API is running");
+  console.log(config.weatherApiKey);
 });
 
 app.use("/api/v1", routes);
