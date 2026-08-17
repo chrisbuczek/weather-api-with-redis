@@ -7,7 +7,7 @@ Endpoint goal: `GET /api/weather/:city`
 ### 1. Setup
 
 `npm init -y`, create `src/server.js`, add `dev` script.
-**Libs:** `express`, `nodemon`
+**Libs:** `express`, `nodemon` - not needed, as we have 'tsx watch'
 
 ### 2. Hardcoded endpoint
 

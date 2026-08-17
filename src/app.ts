@@ -1,4 +1,5 @@
 import express from "express";
+import routes from "./routes";
 
 const app = express();
 const PORT = 3000;
@@ -7,7 +8,7 @@ app.get("/", (_req, res) => {
   res.send("Weather API is running");
 });
 
-// app.use("/api/v1", routes);
+app.use("/api/v1", routes);
 
 // On Vercel the app is invoked per request, so it must not open a port itself.
 if (!process.env.VERCEL) {
